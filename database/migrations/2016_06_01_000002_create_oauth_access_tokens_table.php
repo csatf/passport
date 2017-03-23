@@ -13,7 +13,7 @@ class CreateOauthAccessTokensTable extends Migration
      */
     public function up()
     {
-        Schema::create('passport_oauth_access_tokens', function (Blueprint $table) {
+        Schema::connection('passport')->create('passport_oauth_access_tokens', function (Blueprint $table) {
             $table->string('id', 100)->primary();
             $table->integer('user_id')->index()->nullable();
             $table->integer('client_id');
@@ -32,6 +32,6 @@ class CreateOauthAccessTokensTable extends Migration
      */
     public function down()
     {
-        Schema::drop('passport_oauth_access_tokens');
+        Schema::connection('passport')->drop('passport_oauth_access_tokens');
     }
 }
