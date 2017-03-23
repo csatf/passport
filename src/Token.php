@@ -7,6 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Token extends Model
 {
     /**
+     * The database connection used by the model.
+     *
+     * @var string
+     */
+    protected $connection = 'passport';
+
+    /**
      * The database table used by the model.
      *
      * @var string
