@@ -45,7 +45,7 @@ class RefreshTokenRepository implements RefreshTokenRepositoryInterface
     {
         $this->events = $events;
         $this->tokens = $tokens;
-        $this->database = $database;
+        $this->database = \DB::connection('passport');
     }
 
     /**
