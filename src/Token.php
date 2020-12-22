@@ -11,7 +11,7 @@ class Token extends Model
      *
      * @var string
      */
-    protected $table = 'oauth_access_tokens';
+    protected $table = 'passport_oauth_access_tokens';
 
     /**
      * The "type" of the primary key ID.

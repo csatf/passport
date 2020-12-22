@@ -40,7 +40,7 @@ class CreateOauthClientsTable extends Migration
      */
     public function up()
     {
-        $this->schema->create('oauth_clients', function (Blueprint $table) {
+        $this->schema->create('passport_oauth_clients', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id')->nullable()->index();
             $table->string('name');
@@ -61,6 +61,6 @@ class CreateOauthClientsTable extends Migration
      */
     public function down()
     {
-        $this->schema->dropIfExists('oauth_clients');
+        $this->schema->dropIfExists('passport_oauth_clients');
     }
 }
