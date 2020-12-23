@@ -7,12 +7,20 @@ use Illuminate\Support\Str;
 
 class Client extends Model
 {
+
+    /**
+     * The database connection used by the model.
+     *
+     * @var string
+     */
+    protected $connection = 'passport';
+
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'oauth_clients';
+    protected $table = 'passport_oauth_clients';
 
     /**
      * The guarded attributes on the model.

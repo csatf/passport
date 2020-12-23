@@ -7,11 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 class PersonalAccessClient extends Model
 {
     /**
+     * The database connection used by the model.
+     *
+     * @var string
+     */
+    protected $connection = 'passport';
+
+    /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'oauth_personal_access_clients';
+    protected $table = 'passport_oauth_personal_access_clients';
 
     /**
      * The guarded attributes on the model.

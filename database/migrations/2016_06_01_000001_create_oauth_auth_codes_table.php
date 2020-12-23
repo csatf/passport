@@ -30,7 +30,7 @@ class CreateOauthAuthCodesTable extends Migration
      */
     public function up()
     {
-        $this->schema->create('oauth_auth_codes', function (Blueprint $table) {
+        $this->schema->create('passport_oauth_auth_codes', function (Blueprint $table) {
             $table->string('id', 100)->primary();
             $table->unsignedBigInteger('user_id')->index();
             $table->unsignedBigInteger('client_id');
@@ -47,7 +47,7 @@ class CreateOauthAuthCodesTable extends Migration
      */
     public function down()
     {
-        $this->schema->dropIfExists('oauth_auth_codes');
+        $this->schema->dropIfExists('passport_oauth_auth_codes');
     }
 
     /**

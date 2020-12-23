@@ -7,11 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 class Token extends Model
 {
     /**
+     * The database connection used by the model.
+     *
+     * @var string
+     */
+    protected $connection = 'passport';
+
+    /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'oauth_access_tokens';
+    protected $table = 'passport_oauth_access_tokens';
 
     /**
      * The "type" of the primary key ID.
